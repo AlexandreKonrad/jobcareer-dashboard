@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+💼 JobCareer - Gestor de Candidaturas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mantenha o foco na sua carreira. Um dashboard intuitivo para organizar, rastrear e gerir as suas candidaturas a vagas de emprego, construído com foco em performance e arquitetura limpa.
 
-Currently, two official plugins are available:
+🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deploy (Demo Online): [Insira o seu link da Vercel aqui]
 
-## React Compiler
+Repositório: [Insira o link para este repositório]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+💻 Sobre o Projeto
 
-## Expanding the ESLint configuration
+O JobCareer é uma Single Page Application (SPA) desenvolvida para resolver um problema comum de quem procura emprego: a desorganização. Com este dashboard, o utilizador pode registar vagas, atualizar o status do processo de recrutamento e visualizar métricas em tempo real.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O foco técnico do projeto foi a criação de uma arquitetura escalável, utilizando React com TypeScript, garantindo tipagem estática robusta e componentes reutilizáveis.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✨ Funcionalidades Principais
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📊 Dashboard Visual: Cartões de estatísticas com contagem em tempo real (Candidaturas, Entrevistas, Propostas, etc.).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📝 Gestão de Vagas (CRUD): Adicionar, remover e atualizar o status de candidaturas.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+💾 Persistência de Dados: Uso de localStorage para manter os dados guardados no navegador do utilizador.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎨 Interface Moderna: Layout responsivo com Dark Mode automático e design system consistente.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚡ Performance Otimizada: Uso de Memoização (useMemo, React.memo) para evitar renderizações desnecessárias.
+
+🛠️ Tecnologias Utilizadas
+
+O projeto foi construído com uma stack moderna focada em performance e DX (Developer Experience):
+
+Core: React (Vite) + TypeScript
+
+Estilização: Tailwind CSS + Flowbite React
+
+Ícones: React Icons / Lucide
+
+Deploy: Vercel
+
+Qualidade de Código: ESLint, Clean Code, Hooks Personalizados.
+
+🏗️ Arquitetura e Refatoração
+
+Durante o desenvolvimento, o projeto passou por um processo rigoroso de refatoração para atingir padrões de produção:
+
+Custom Hooks: A lógica de negócio foi separada da UI através de hooks como useJobManager (CRUD) e useJobStats (Cálculos), seguindo o princípio de Separation of Concerns.
+
+Performance: Implementação de useCallback e React.memo em componentes de lista (JobItem) para garantir que apenas os itens modificados sejam renderizados.
+
+Type Safety: Tipagem rigorosa com Interfaces e Types para todas as props e estados (Job, JobFormData), eliminando o uso de any.
+
+UX Improvements: Tratamento de erros visuais nos formulários e layout adaptativo para telemóvel (posicionamento absoluto de mensagens de erro).
+
+Inversão de Dependência: O layout principal (DashLayout) recebe componentes via composição, tornando a estrutura flexível.
+
+🚀 Como executar localmente
+
+Siga estes passos para correr o projeto na sua máquina:
+
+Clone o repositório:
+
+git clone [https://github.com/SEU_USUARIO/jobcareer-dashboard.git](https://github.com/SEU_USUARIO/jobcareer-dashboard.git)
+
+
+Entre na pasta:
+
+cd jobcareer-dashboard
+
+
+Instale as dependências:
+
+npm install
+
+
+Inicie o servidor de desenvolvimento:
+
+npm run dev
+
+
+Aceda a http://localhost:5173 no seu navegador.
+
+🤝 Autor
+
+Desenvolvido por [Seu Nome].
+
+Este projeto foi desenvolvido com fins de estudo e portfólio, aplicando conceitos avançados de React e TypeScript.
