@@ -40,7 +40,7 @@ Durante o desenvolvimento, o projeto passou por um processo rigoroso de refatora
 - **Custom Hooks:** A lógica de negócio foi separada da UI através de hooks como `useJobManager` (CRUD) e `useJobStats` (Cálculos), seguindo o princípio de *Separation of Concerns*.
 - **Performance:** Implementação de `useCallback` e `React.memo` em componentes de lista (`JobItem`) para garantir que apenas os itens modificados sejam renderizados.
 - **Type Safety:** Tipagem rigorosa com Interfaces e Types para todas as props e estados (`Job`, `JobFormData`), eliminando o uso de `any`.
-- **UX Improvements:** Tratamento de erros visuais nos formulários e layout adaptativo para telemóvel (posicionamento absoluto de mensagens de erro).
+- **UX Improvements:** Tratamento de erros visuais nos formulários e layout adaptativo para smartphones (posicionamento absoluto de mensagens de erro).
 - **Inversão de Dependência:** O layout principal (`DashLayout`) recebe componentes via composição, tornando a estrutura flexível.
 
 ## 🚀 Como executar localmente
@@ -50,18 +50,16 @@ Siga estes passos para correr o projeto na sua máquina:
 1. Clone o repositório:
    ```bash
    git clone [https://github.com/AlexandreKonrad/jobcareer-dashboard.git](https://github.com/AlexandreKonrad/jobcareer-dashboard.git)
-2. Clone o repositório:
+2. Entre na pasta:
    ```bash
-   git clone [https://github.com/AlexandreKonrad/jobcareer-dashboard.git](https://github.com/AlexandreKonrad/jobcareer-dashboard.git)
-1. Clone o repositório:
+   cd jobcareer-dashboard
+3. Instale as dependências:
    ```bash
-   git clone [https://github.com/AlexandreKonrad/jobcareer-dashboard.git](https://github.com/AlexandreKonrad/jobcareer-dashboard.git)
-1. Clone o repositório:
+   npm install
+4. Inicie o servidor de desenvolvimento:
    ```bash
-   git clone [https://github.com/AlexandreKonrad/jobcareer-dashboard.git](https://github.com/AlexandreKonrad/jobcareer-dashboard.git)
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/AlexandreKonrad/jobcareer-dashboard.git](https://github.com/AlexandreKonrad/jobcareer-dashboard.git)
+   npm run dev
+5. Acesse http://localhost:5173 no seu navegador.
 
 ## 🤝 Autor
 - **Desenvolvido** por Alexandre Vargas Konrad.
